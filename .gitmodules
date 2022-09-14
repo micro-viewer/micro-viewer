@@ -1,3 +1,12 @@
 [submodule "micro-core"]
 	path = micro-core
 	url = https://github.com/micro-viewer/micro-core.git
+[submodule "static-serve"]
+	path = static-serve
+	url = https://github.com/micro-viewer/static-serve.git
+[submodule "micro-components"]
+	path = micro-components
+	url = https://github.com/micro-viewer/micro-components.git
+[submodule "micro-applications"]
+	path = micro-applications
+	url = https://github.com/micro-viewer/micro-applications.git
