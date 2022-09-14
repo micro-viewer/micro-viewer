@@ -1,0 +1,17 @@
+{
+  "name": "micro-viewer",
+  "version": "0.0.1",
+  "description": "frontend",
+  "main": "index.js",
+  "scripts": {
+    "create:micro-app": "npx create-single-spa"
+  },
+  "keywords": [
+    "frontend"
+  ],
+  "author": "chen fei",
+  "license": "MIT",
+  "devDependencies": {
+    "create-single-spa": "^4.1.2"
+  }
+}
