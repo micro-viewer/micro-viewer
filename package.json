@@ -4,6 +4,15 @@
   "description": "frontend",
   "main": "index.js",
   "scripts": {
+    "start": "concurrently \"npm run start:base\" \"npm run start:micro-components\" \"npm run start:micro-applications\"",
+    "start:base": "concurrently \"npm run to:micro-core\" \"npm run to:static-serve\"",
+    "start:micro-components": "concurrently \"npm run to:header\" \"npm run to:navbar\"",
+    "start:micro-applications": "concurrently \"npm run to:base-user\"",
+    "to:micro-core": "cd ./micro-core && npm run start",
+    "to:static-serve": "cd ./static-serve && npm run start",
+    "to:header": "cd ./micro-components/header && npm run serve",
+    "to:navbar": "cd ./micro-components/navbar && npm run serve",
+    "to:base-user": "cd ./micro-applications/base-user && npm run serve",
     "create:micro-app": "npx create-single-spa"
   },
   "keywords": [
@@ -13,5 +22,8 @@
   "license": "MIT",
   "devDependencies": {
     "create-single-spa": "^4.1.2"
+  },
+  "dependencies": {
+    "concurrently": "^7.4.0"
   }
 }
